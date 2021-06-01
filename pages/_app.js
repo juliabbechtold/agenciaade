@@ -8,7 +8,7 @@ export default class MyApp extends App {
     return (
       <>
         <Head>
-          <meta charset="utf-8" />
+          <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="keywords" content="" />
           <link rel="icon" href="/favicon.png" />
@@ -20,9 +20,9 @@ export default class MyApp extends App {
           <script
             dangerouslySetInnerHTML={{
               __html: `window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments)}
-    gtag('js', new Date());
-    gtag('config', 'UA-180421237-2');`,
+                       function gtag(){dataLayer.push(arguments)}
+                       gtag('js', new Date());
+                       gtag('config', 'UA-180421237-2');`,
             }}
           />
         </Head>
