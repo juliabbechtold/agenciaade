@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { notification } from "antd";
 import Input from "react-input-mask";
+import Image from "next/image";
 
 import ademail from "../../services/ademail";
 
@@ -71,8 +72,24 @@ export default function Contato() {
 
   return (
     <Container>
-      <p>Entre em contato conosco!</p>
+      <div className="banner">
+        <Image
+          src="/assets/banner-contato.jpg"
+          alt="banner contato"
+          layout="fill"
+          objectFit="cover"
+        />
+      </div>
       <form onSubmit={formik.handleSubmit}>
+        <div className="header-contato">
+          <div className="title">
+            <h2>CONTATO</h2>
+            <div className="line" />
+          </div>
+          <h1>
+            NOS MANDE&nbsp; <span>UMA MENSAGEM!</span>
+          </h1>
+        </div>
         <div>
           <input
             type="text"
@@ -120,9 +137,6 @@ export default function Contato() {
           ) : null}
         </div>
         <div>
-          {formik.touched.telefone && formik.errors.telefone ? (
-            <span className="erro">{formik.errors.telefone}</span>
-          ) : null}
           <textarea
             name="mensagem"
             placeholder="Mensagem"
