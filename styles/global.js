@@ -17,14 +17,7 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
-  h1{
-    font-size: 24px;
-    font-weight: bold;
-  }
-  h2{
-    font-size: 14px;
-    font-weight: bold;
-  }
+
   * {
     box-sizing: border-box;
   }

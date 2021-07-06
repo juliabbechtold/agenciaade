@@ -1,59 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-  width: 100%;
-  display: flex;
-  height: auto;
-  position: relative;
-  padding-bottom: 100px;
-  .banner {
-    width: 55%;
-    position: absolute;
-    height: 700px;
+  width: 50%;
+
+  p {
+    margin: 0;
+    font-size: 24px;
+    line-height: 30px;
   }
+
   form {
-    z-index: 1;
-    height: 700px;
-    margin: auto 0 auto auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 55%;
-    padding: 50px 5%;
-    border-bottom-left-radius: 90px;
-    background: #f5f5f5;
-    .header-contato {
-      display: flex;
-      flex-direction: column;
-      .title {
-        display: flex;
-        h2 {
-          font-weight: bold;
-          font-size: 16px;
-          margin: auto;
-          padding-right: 15px;
-        }
-        .line {
-          background: #ff5050;
-          width: 100%;
-          height: 1px;
-          margin: auto;
-        }
-      }
-      h1 {
-        display: flex;
-        color: #000;
-        font-size: 24px;
-        font-weight: 400;
-        span {
-          position: relative;
-          color: #000;
-          font-weight: bold;
-          bottom: unset;
-          font-size: 24px;
-        }
-      }
-    }
+    width: 100%;
+
     > div {
       width: 100%;
       position: relative;
@@ -64,13 +25,12 @@ export const Container = styled.section`
     input,
     textarea {
       width: 100%;
-      border: unset;
-      border-bottom: 1px solid #ccc;
-      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 18px;
       line-height: 24px;
-      color: #646464;
+      color: #000;
       margin-top: 30px;
-      background: transparent;
     }
 
     span {
@@ -83,13 +43,12 @@ export const Container = styled.section`
     input {
       height: 50px;
       padding: 0 20px;
-      background: transparent;
     }
 
     textarea {
       padding: 20px;
       resize: none;
-      height: 150px;
+      height: 200px;
     }
 
     .btn {
