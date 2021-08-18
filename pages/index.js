@@ -1,11 +1,13 @@
 import React from "react";
 import Head from "next/head";
+import Cookies from "../components/Cookies/Cookies";
 
 import { Container } from "../styles/home.js";
 
 export default function Home() {
   return (
     <>
+      <Cookies />
       <Head>
         <title>
           Agência Ade! Publicidade e Propaganda em Ponta Grossa - PR
