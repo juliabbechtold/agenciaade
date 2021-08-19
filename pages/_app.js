@@ -1,7 +1,7 @@
 import App from "next/app";
 import GlobalStyle from "../styles/global.js";
 import Head from "next/head";
-
+import SiteScripts from "../utils/site-scripts.js";
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
@@ -26,6 +26,7 @@ export default class MyApp extends App {
             }}
           />
         </Head>
+        <SiteScripts />
         <Component {...pageProps} />
         <GlobalStyle />
       </>
