@@ -8,10 +8,16 @@ function SiteScripts() {
 
   useEffect(() => {
     async function scriptApi() {
-      const response = await api.get("acf/v3/options/options_site");
-      if (response.data.acf.site_scripts) {
-        setScripts(response.data.acf.site_scripts);
-      }
+      const response = await api
+        .get("acf/v3/options/options_site")
+        .then((res) => {
+          if (res.data) {
+            setScripts(res.data.acf.site_scripts);
+          }
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
     scriptApi();
   }, []);
