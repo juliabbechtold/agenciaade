@@ -16,7 +16,9 @@ function SiteScripts() {
           }
         })
         .catch((error) => {
-          console.log(error);
+          console.log(
+            "ATENÇÃO! Scripts não configurados, verifique as rotas..."
+          );
         });
     }
     scriptApi();
