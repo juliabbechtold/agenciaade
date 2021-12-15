@@ -1,6 +1,7 @@
 import App from "next/app";
 import GlobalStyle from "../styles/global.js";
 import Head from "next/head";
+import SiteScripts from "../utils/site-scripts.js";
 export default class MyApp extends App {
   render() {
     const { Component, pageProps } = this.props;
@@ -12,13 +13,20 @@ export default class MyApp extends App {
           <meta name="keywords" content="" />
           <link rel="icon" href="/favicon.png" />
           <meta property="og:image" content="/screenshot.png" />
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
-            rel="stylesheet"
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-180421237-1"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || [];
+                       function gtag(){dataLayer.push(arguments)}
+                       gtag('js', new Date());
+                       gtag('config', 'UA-180421237-2');`,
+            }}
           />
         </Head>
+        <SiteScripts />
         <Component {...pageProps} />
         <GlobalStyle />
       </>
