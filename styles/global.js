@@ -11,6 +11,8 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
     scroll-behavior: smooth;
     height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #282424;
   }
 
   a {
@@ -20,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
   * {
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
   }
 
   button, input, textarea {

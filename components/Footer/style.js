@@ -19,9 +19,14 @@ export const Container = styled.footer`
   p,
   a {
     font-size: 14px;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     margin: 0;
+
+    @media (max-width: 1440px) {
+      font-size: 12px;
+      text-align: center;
+    }
   }
 
   svg {
