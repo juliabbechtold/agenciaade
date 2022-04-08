@@ -3,7 +3,7 @@ import Footer from '../../components/Footer/Footer';
 import Services from '../../components/Services';
 import Header from '../../components/Header/Header';
 import Question from '../../components/Question';
-import { Container } from './style';
+import { Container } from '../../styles/servicos';
 import api from '../../services/api';
 
 export async function getStaticProps() {

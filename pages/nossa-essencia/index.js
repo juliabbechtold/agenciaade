@@ -4,7 +4,7 @@ import Header from '../../components/Header/Header';
 import Services from '../../components/Services';
 import Question from '../../components/Question';
 import Image from 'next/image';
-import { Container, Banner, Culture, Visao } from './style';
+import { Container, Banner, Culture, Visao } from '../../styles/nossa-essencia';
 import { MdArrowRightAlt } from 'react-icons/md';
 import api from '../../services/api';
 import { Carousel } from 'antd';
