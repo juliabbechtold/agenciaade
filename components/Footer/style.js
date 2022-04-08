@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { keyframes } from 'styled-components';
 
 const heartBeat = keyframes`
     0%, 100%, 40%, 60% {
@@ -11,27 +11,44 @@ const heartBeat = keyframes`
 
 export const Container = styled.footer`
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 20px;
+  background-color: #0f111a;
+  padding-top: 100px;
 
-  p,
-  a {
-    font-size: 14px;
-    color: #000;
-    text-decoration: none;
-    margin: 0;
-  }
+  .rights {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 20px;
 
-  svg {
-    margin: 0 8px;
-    height: 15px;
-    width: auto;
-    position: relative;
+    @media (max-width: 1440px) {
+      padding: 50px 20px;
+    }
 
-    animation-name: ${heartBeat};
-    animation-iteration-count: infinite;
-    animation-duration: 2s;
+    @media (max-width: 750px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    p {
+      font-size: 14px;
+      color: var(--primary-white-color);
+      margin: 0;
+      text-align: center;
+
+      @media (max-width: 1440px) {
+        font-size: 12px;
+      }
+    }
+
+    svg {
+      margin: 0 8px;
+      height: 15px;
+      width: auto;
+      position: relative;
+
+      animation-name: ${heartBeat};
+      animation-iteration-count: infinite;
+      animation-duration: 2s;
+    }
   }
 `;

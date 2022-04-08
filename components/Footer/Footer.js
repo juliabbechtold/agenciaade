@@ -1,18 +1,22 @@
-import React from "react";
-import { Container } from "./style";
-import { FiHeart } from "react-icons/fi";
+import React from 'react';
+import { Container } from './style';
+import { FiHeart } from 'react-icons/fi';
+import Certification from './components/Certification';
+import Contact from './components/Contact';
 
-export default function Footer() {
+export default function Footer({ certificates }) {
   return (
-    <Container>
-      <p>©2020 Nome do site. Todos os direitos reservados</p>
-      <a
-        href="https://agenciaade.com.br/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Feito com <FiHeart /> por agenciaade.com.br
-      </a>
+    <Container id="contato">
+      <Contact />
+      <Certification data={certificates} />
+      <div className="rights container">
+        <p>
+          ©2022 Agência Ade sempre atualizada. Todos os direitos reservados.
+        </p>
+        <p>
+          Feito com <FiHeart /> por nós mesmos ;)
+        </p>
+      </div>
     </Container>
   );
 }
