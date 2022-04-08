@@ -1,9 +1,10 @@
 import React, { useRef, useState } from 'react';
 import Footer from '../../components/Footer/Footer';
 import Header from '../../components/Header/Header';
+import Services from '../../components/Services';
 import Question from '../../components/Question';
 import Image from 'next/image';
-import { Container, Banner, Culture, Visao, Services } from './style';
+import { Container, Banner, Culture, Visao } from './style';
 import { MdArrowRightAlt } from 'react-icons/md';
 import api from '../../services/api';
 import { Carousel } from 'antd';
@@ -143,42 +144,7 @@ export default function Essencia({ certificates, data, adeptos, tipos }) {
             </p>
           </div>
         </Visao>
-        <Services>
-          <h2 className="-small -spacing-6 -light">
-            NOSSOS <strong className="-bold">SERVIÇOS</strong>
-          </h2>
-          <h3 className="-medium">{data.servicos.descricao}</h3>
-          <p>{data.servicos.conteudo}</p>
-          <div>
-            <ul>
-              {tipos.map((tipo, index) => (
-                <li key={index}>
-                  <a href={`/servicos/${tipo.slug}`}>
-                    <div>
-                      <h2>{tipo.name}</h2>
-                      <p>{tipo.description}</p>
-                    </div>
-                    <div className="galery">
-                      {!!tipo.acf.modelos &&
-                        tipo.acf.modelos.map((img, key) => (
-                          <div key={key}>
-                            <Image src={img.sizes.medium} layout="fill" />
-                          </div>
-                        ))}
-                    </div>
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <a href="/portfolio" className="link-arrow -small -bold">
-            Veja todos no <strong>Portfólio</strong>
-            <div>
-              <div className="inner" />
-              <div className="inner2" />
-            </div>
-          </a>
-        </Services>
+        <Services tipos={tipos} servicos={data} />
         <Question content={data.pergunta} />
       </Container>
       <Footer certificates={certificates} />

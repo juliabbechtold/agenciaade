@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
-import Cookies from '../components/Cookies/Cookies';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 import api from '../services/api';
@@ -85,7 +84,6 @@ export default function Home({ certificates, posts, data, cases, works }) {
 
   return (
     <>
-      <Cookies />
       <Head>
         <title>
           Agência Ade! Publicidade e Propaganda em Ponta Grossa - PR
